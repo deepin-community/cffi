@@ -1,0 +1,28 @@
+Document: cffi-sys-spec
+Title: CFFI-SYS Interface Specification
+Abstract: CFFI, the Common Foreign Function Interface, purports to be a portable
+ foreign function interface for Common Lisp.
+ This specification defines a set of low-level primitives that must be
+ defined for each Lisp implementation supported by CFFI.  These operators
+ are defined in the 'CFFI-SYS' package.
+Section: Programming
+
+Format: HTML
+Index: /usr/share/doc/cl-cffi/cffi-sys-spec.html
+Files: /usr/share/doc/cl-cffi/cffi-sys-spec.html
+
+Format: Text
+Files: /usr/share/doc/cl-cffi/cffi-sys-spec.txt.gz
+
+Format: PDF
+Files: /usr/share/doc/cl-cffi/cffi-sys-spec.pdf.gz
+
+Format: DVI
+Files: /usr/share/doc/cl-cffi/cffi-sys-spec.dvi.gz
+
+Format: PostScript
+Files: /usr/share/doc/cl-cffi/cffi-sys-spec.ps.gz
+
+Format: Info
+Index: /usr/share/info/cffi-sys-spec.info.gz
+Files: /usr/share/info/cffi-sys-spec.info*.gz

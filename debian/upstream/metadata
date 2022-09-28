@@ -1,0 +1,4 @@
+Bug-Database: https://wiki.debian.org/UpstreamMetadata
+Documentation: https://common-lisp.net/project/cffi/manual/index.html
+Repository: https://github.com/cffi/cffi.git
+Repository-Browse: https://github.com/cffi/cffi

@@ -1,0 +1,28 @@
+Document: cffi-manual
+Title: CFFI User Manual
+Abstract: CFFI is the Common Foreign Function Interface for ANSI Common Lisp
+ systems. By foreign function we mean a function written in another programming
+ language and having different data and calling conventions than Common Lisp,
+ namely, C. CFFI allows you to call foreign functions and access foreign
+ variables, all without leaving the Lisp image.
+Section: Programming
+
+Format: HTML
+Index: /usr/share/doc/cl-cffi/cffi-manual.html
+Files: /usr/share/doc/cl-cffi/cffi-manual.html
+
+Format: Text
+Files: /usr/share/doc/cl-cffi/cffi-manual.txt.gz
+
+Format: PDF
+Files: /usr/share/doc/cl-cffi/cffi-manual.pdf.gz
+
+Format: DVI
+Files: /usr/share/doc/cl-cffi/cffi-manual.dvi.gz
+
+Format: PostScript
+Files: /usr/share/doc/cl-cffi/cffi-manual.ps.gz
+
+Format: Info
+Index: /usr/share/info/cffi-manual.info.gz
+Files: /usr/share/info/cffi-manual.info*.gz

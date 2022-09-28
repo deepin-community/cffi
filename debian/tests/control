@@ -1,0 +1,11 @@
+Test-Command: sbcl --script debian/tests/runtests.lisp
+Depends: @, sbcl, cl-bordeaux-threads, cl-rt
+Restrictions: allow-stderr
+
+Test-Command: ecl -norc -shell debian/tests/runtests.lisp
+Depends: @, ecl, cl-bordeaux-threads, cl-rt
+Restrictions: allow-stderr
+
+#Test-Command: clisp -norc debian/tests/runtests.lisp
+#Depends: @, clisp, cl-bordeaux-threads, cl-rt
+#Restrictions: allow-stderr

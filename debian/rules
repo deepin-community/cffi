@@ -1,0 +1,19 @@
+#!/usr/bin/make -f
+
+# Ensure texlive respects SOURCE_DATE_EPOCH (see #995648)
+export FORCE_SOURCE_DATE=1
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	make -C doc
+
+override_dh_auto_test:
+# Do not run testsuite at build time, rely on autopkgtest
+
+override_dh_auto_clean:
+	make -C doc clean
+
+execute_after_dh_install:
+	rm debian/cl-cffi/usr/share/common-lisp/source/cl-cffi/uffi-compat/*.asd

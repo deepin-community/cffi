@@ -1,0 +1,228 @@
+cffi (1:0.24.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update standards version to 4.6.0, no changes needed.
+  * debian/rules: Export FORCE_SOURCE_DATE=1 in order for texlive to
+    respect SOURCE_DATE_EPOCH when generating .dvi and .ps files. Thanks
+    to Vagrant Cascadian. (Closes: #995648)
+  * libffi8.patch: new patch, adds support for libffi8
+
+ -- Sébastien Villemot <sebastien@debian.org>  Thu, 04 Nov 2021 15:24:44 +0100
+
+cffi (1:0.23.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump S-V to 4.5.1
+
+ -- Sébastien Villemot <sebastien@debian.org>  Tue, 24 Nov 2020 14:06:33 +0100
+
+cffi (1:0.22.1-2) unstable; urgency=medium
+
+  * Add Depends on cl-rt for ecl autopkgtest. Since ecl 20.4.24, the rt
+    contrib is no longer built by default. (Closes: #970335)
+
+ -- Sébastien Villemot <sebastien@debian.org>  Tue, 15 Sep 2020 10:54:27 +0200
+
+cffi (1:0.22.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump to debhelper 13
+  * d/rules: simplify using debhelper 12.8’s execute_after_* rules
+  * Add d/upstream/metadata
+  * Add dependency on zlib1g-dev: needed when compiling static programs
+  * d/tests/runtests.lisp: add quirks for passing tests that compile
+    static programs (now that SBCL is compiled with sb-linkable-runtime)
+
+ -- Sébastien Villemot <sebastien@debian.org>  Sat, 04 Jul 2020 10:45:37 +0200
+
+cffi (1:0.21.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump S-V to 4.5.0
+
+ -- Sébastien Villemot <sebastien@debian.org>  Tue, 28 Jan 2020 21:18:16 +0100
+
+cffi (1:0.20.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump to debhelper compat level 12
+  * Trim trailing whitespace.
+  * Re-export upstream signing key without extra signatures.
+  * Bump S-V to 4.4.1
+  * Build-Depend on texlive-plain-generic instead of obsolete
+    texlive-generic-recommended (Closes: #941514)
+
+ -- Sébastien Villemot <sebastien@debian.org>  Sat, 12 Oct 2019 01:04:52 +0200
+
+cffi (1:0.20.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * d/copyright: reflect upstream changes
+  * Use secure URL in Homepage field.
+  * Actually fail autopkgtest on test failures.
+  * Disable autopkgtest on clisp for the time being, too many failures
+    on both amd64 and i386 (Closes: #901740)
+  * Add Rules-Requires-Root: no
+  * Migrate to new way of specifying debhelper compat level
+  * Bump to S-V 4.2.1
+
+ -- Sébastien Villemot <sebastien@debian.org>  Sun, 18 Nov 2018 11:18:34 +0100
+
+cffi (1:0.19.0-3) unstable; urgency=medium
+
+  * Add dependency on libc6-dev | libc-dev (needed by cffi-grovel).
+  * Set Maintainer to debian-common-lisp@l.d.o.
+
+ -- Sébastien Villemot <sebastien@debian.org>  Wed, 04 Apr 2018 21:10:52 +0200
+
+cffi (1:0.19.0-2) unstable; urgency=medium
+
+  * Update Vcs-* fields for move to salsa.
+  * Add debian/source/format.
+  * Remove obsolete README.building.
+  * Rewrite d/watch, with PGP signature checking.
+  * Bump to debhelper compat level 11.
+  * Remove build-dependency on dh-lisp.
+  * Rewrite d/rules using dh.
+  * Add missing files for cffi-libffi and cffi-toolchain.
+    Also add missing Depends on gcc (for cffi-toolchain), pkg-config (for
+    cffi-grovel) and libffi-dev (for cffi-libffi). (Closes: #894543)
+  * Remove unused Build-Depends on a2ps.
+  * Rewrite d/copyright using machine-readable format 1.0.
+  * Bump Standards-Version to 4.1.3.
+  * Install info manuals under /usr/share/info. (Closes: #784552)
+  * Stop distributing the one-file-per-node version of HTML documentation
+    (but keep the all-in-one-page version) (Closes: #784550)
+  * Register documentation into doc-base.
+  * Add Suggests on cl-bordeaux-threads and cl-rt, needed by cffi-tests.
+  * Add myself to Uploaders.
+  * cffi-tests.patch: new patch, avoids test failure due to testsuite being
+    installed in read-only directory.
+  * Add an autopkgtest that runs the testsuite on sbcl, ecl and clisp.
+    (Closes: #560966)
+
+ -- Sébastien Villemot <sebastien@debian.org>  Sun, 01 Apr 2018 12:28:00 +0200
+
+cffi (1:0.19.0-1) unstable; urgency=medium
+
+  * Quicklisp release update.
+
+ -- Dimitri Fontaine <dim@tapoueh.org>  Thu, 06 Jul 2017 16:27:30 +0300
+
+cffi (1:0.18.0-1) unstable; urgency=medium
+
+  * Quicklisp release update.
+
+ -- Dimitri Fontaine <dim@tapoueh.org>  Sun, 20 Nov 2016 19:44:48 +0300
+
+cffi (1:0.17.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Fix makeinfo woes on wheezy and precise.
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Wed, 10 Aug 2016 15:02:57 +0200
+
+cffi (1:0.17.1-1) unstable; urgency=medium
+
+  * Quicklisp release update.
+
+ -- Dimitri Fontaine <dim@tapoueh.org>  Wed, 06 Apr 2016 21:48:21 +0300
+
+cffi (1:0.16.1-1) unstable; urgency=medium
+
+  * Quicklisp release update.
+
+ -- Dimitri Fontaine <dim@tapoueh.org>  Mon, 02 Nov 2015 20:32:39 +0300
+
+cffi (1:0.15.0-1) unstable; urgency=medium
+
+  * Quicklisp release update.
+
+ -- Dimitri Fontaine <dim@tapoueh.org>  Wed, 15 Jul 2015 16:46:02 +0300
+
+cffi (1:0.14.0-1) unstable; urgency=medium
+
+  * Quicklisp release update.
+
+ -- Dimitri Fontaine <dim@tapoueh.org>  Fri, 10 Oct 2014 14:02:03 +0400
+
+cffi (1:0.13.0-1) unstable; urgency=medium
+
+  * Quicklisp release update.
+
+ -- Dimitri Fontaine <dim@tapoueh.org>  Tue, 19 Aug 2014 17:02:18 +0400
+
+cffi (20100219-2) unstable; urgency=low
+
+  * Added grovel/ to the copied files. (Closes: #565864)
+
+ -- Peter Van Eynde <pvaneynd@debian.org>  Mon, 19 Apr 2010 20:56:38 +0200
+
+cffi (20100219-1) unstable; urgency=low
+
+  * New upstream, mostly documentation changes.
+
+ -- Peter Van Eynde <pvaneynd@debian.org>  Tue, 02 Mar 2010 07:32:24 +0100
+
+cffi (20091211-1) unstable; urgency=low
+
+  * Changes Section to lisp
+  * New upstream with minor changes.
+
+ -- Peter Van Eynde <pvaneynd@debian.org>  Thu, 31 Dec 2009 14:34:42 +0100
+
+cffi (20090823-2) unstable; urgency=low
+
+  * Added correct dependencies. (Closes: #549264)
+  * duplicate html page just went away, no idea why. (Closes: #546172)
+
+ -- Peter Van Eynde <pvaneynd@debian.org>  Sat, 07 Nov 2009 08:56:04 +0100
+
+cffi (20090823-1) unstable; urgency=low
+
+  * New upstream version (Closes: #519796, #511074)
+  * Now use debhelper v7
+  * Added debian/watch file
+  * Added debian/README.building
+  * Updated Standards-Version no real changes
+
+ -- Peter Van Eynde <pvaneynd@debian.org>  Thu, 10 Sep 2009 13:14:18 +0100
+
+cffi (20080217-1) unstable; urgency=low
+
+  * New upstream
+  * Changed to group maintanance
+  * Corrected Vcs-Darcs control field
+  * Updated Standard Version without real changes
+  * Added Homepage field
+  * swap binary-indep and binary-arch round
+
+ -- Peter Van Eynde <pvaneynd@debian.org>  Thu, 13 Mar 2008 23:59:46 +0100
+
+cffi (20070901-3) UNRELEASED; urgency=low
+
+  * token new version
+  * Use Vcs-Darcs in control file
+
+ -- Peter Van Eynde <pvaneynd@debian.org>  Fri, 26 Oct 2007 05:35:26 +0200
+
+cffi (20070901-2) unstable; urgency=low
+
+  * Stop conflicting with uffi and stop installing the
+    uffi-compat/uffi.asd file.
+
+ -- Peter Van Eynde <pvaneynd@debian.org>  Tue, 02 Oct 2007 23:49:10 +0200
+
+cffi (20070901-1) unstable; urgency=low
+
+  * New upstream version with several fixes. (Closes: #442064)
+  * Use texlive now.
+  * Added conflict with cl-uffi.
+
+ -- Peter Van Eynde <pvaneynd@debian.org>  Mon, 17 Sep 2007 05:22:05 +0200
+
+cffi (20061013-1) unstable; urgency=low
+
+  * Initial release. (Closes: #394223)
+
+ -- Peter Van Eynde <pvaneynd@debian.org>  Sun, 22 Oct 2006 21:50:37 +0200

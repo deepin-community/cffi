@@ -1,0 +1,3 @@
+version=4
+opts="pgpmode=auto" https://common-lisp.net/project/@PACKAGE@/releases/ \
+ @PACKAGE@@ANY_VERSION@@ARCHIVE_EXT@ debian uupdate
